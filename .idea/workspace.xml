@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f6e89a8-deec-46c2-94d0-37533d43a87b" name="Changes" comment="" />
+    <list default="true" id="9f6e89a8-deec-46c2-94d0-37533d43a87b" name="Changes" comment="Pakeitimai.01" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,7 +22,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="6ad89de87756b79871f6387b922d9a4fc7b2f0b3" />
+        <entry key="$PROJECT_DIR$" value="budget-demo" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
