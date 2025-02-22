@@ -5,11 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f6e89a8-deec-46c2-94d0-37533d43a87b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BankCard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/ExpenseRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/IncomeRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/PaymentMethodType.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/org/maven/jp_budget/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/org/maven/jp_budget/App.class" afterDir="false" />
@@ -31,7 +26,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="budget-demo" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,7 +60,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "budget-demo",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -79,6 +74,21 @@
     <key name="CreateTestDialog.RecentsKey">
       <recent name="org.maven.jp_budget" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="App" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.maven.jp_budget.App" />
+      <module name="jp-budget" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.maven.jp_budget.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
