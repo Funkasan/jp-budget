@@ -1,7 +1,9 @@
 package org.maven.jp_budget;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class BudgetService {
 
@@ -23,4 +25,15 @@ public class BudgetService {
     public void setExpenseRecords(final ExpenseRecord expenseRecords) {
         this.expenseRecords.add(expenseRecords);
     }
+
+    public double balansas(){
+        double totalIncome = incomeRecords.stream().map(IncomeRecord::getAmount).filter(Objects::nonNull).mapToDouble(BigDecimal::doubleValue).sum();
+        double totalExpense = expenseRecords.stream().map(ExpenseRecord::getAmount).filter(Objects::nonNull).mapToDouble(BigDecimal::doubleValue).sum();
+
+        return totalIncome-totalExpense;
+
+    }
+
+
+
 }
