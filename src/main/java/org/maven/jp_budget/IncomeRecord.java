@@ -10,12 +10,14 @@ public class IncomeRecord {
     private final boolean isBankTransfer;
     private final String otherInfo;
 
+
     public IncomeRecord(BigDecimal amount, String category, LocalDateTime date, boolean isBankTransfer, String otherInfo) {
         this.amount = amount;
         this.category = category;
         this.date = date;
         this.isBankTransfer = isBankTransfer;
         this.otherInfo = otherInfo;
+
     }
 
     public BigDecimal getAmount() {

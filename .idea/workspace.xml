@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9f6e89a8-deec-46c2-94d0-37533d43a87b" name="Changes" comment="Pakeitimai.01" />
+    <list default="true" id="9f6e89a8-deec-46c2-94d0-37533d43a87b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/IncomeRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/IncomeRecord.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,8 +20,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -138,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740218050105</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Pakeitimai.01">
+      <option name="closed" value="true" />
+      <created>1740219022977</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1740219022977</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -165,8 +179,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Pakeitimai.01" />
     <MESSAGE value="create initial maven (empty) budget project" />
-    <option name="LAST_COMMIT_MESSAGE" value="create initial maven (empty) budget project" />
+    <MESSAGE value="Pakeitimai.01" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pakeitimai.01" />
   </component>
 </project>
