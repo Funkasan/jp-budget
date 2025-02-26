@@ -12,13 +12,13 @@ public class BudgetManager {
     public void run() {
 
         int pasirinkimas;
-        IncomeRecord incomeRecord1 = new IncomeRecord(BigDecimal.valueOf(1500L), "Atlyginimas", LocalDateTime.now(), true, (String) null);
+        IncomeRecord incomeRecord1 = new IncomeRecord(BigDecimal.valueOf(1500L), "Atlyginimas", LocalDateTime.now(), true, (String) null, 1);
         budgetService.setIncomeRecord(incomeRecord1);
-        IncomeRecord incomeRecord2 = new IncomeRecord(BigDecimal.valueOf(600L), "Pensija", LocalDateTime.now(), true, (String) null);
+        IncomeRecord incomeRecord2 = new IncomeRecord(BigDecimal.valueOf(600L), "Pensija", LocalDateTime.now(), true, (String) null, 2);
         budgetService.setIncomeRecord(incomeRecord2);
-        ExpenseRecord expenseRecord1 = new ExpenseRecord(BigDecimal.valueOf(100L), "Food", LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"));
+        ExpenseRecord expenseRecord1 = new ExpenseRecord(BigDecimal.valueOf(100L), "Food", LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), 3);
         budgetService.setExpenseRecords(expenseRecord1);
-        ExpenseRecord expenseRecord2 = new ExpenseRecord(BigDecimal.valueOf(200L), "Komunaliniai", LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"));
+        ExpenseRecord expenseRecord2 = new ExpenseRecord(BigDecimal.valueOf(200L), "Komunaliniai", LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), 4);
 
         budgetService.setExpenseRecords(expenseRecord2);
 
@@ -36,6 +36,7 @@ public class BudgetManager {
             System.out.println("3. Patikrinti balansą");
             System.out.println("4. Parodyti pajamas");
             System.out.println("5. Parodyti islaidas");
+            System.out.println("6. Pasalinti saskaita");
             System.out.println("0. Išeiti");
             System.out.print("Pasirinkite veiksmą: ");
             pasirinkimas = scanner.nextInt();
@@ -56,6 +57,10 @@ public class BudgetManager {
                 case 5:
                     printExpenseRecords();
                     break;
+                case 6:
+                    budgetService.deleteRecord();
+                    System.out.println("Israsas istrintas");
+                    break;
                 case 0:
                     System.out.println("Programa baigta.");
                     break;
@@ -73,7 +78,9 @@ public class BudgetManager {
         BigDecimal amount = scanner.nextBigDecimal();
         System.out.println("Iveskite pajamu tipa: ");
         String tipas = scanner.next();
-        IncomeRecord incomeRecord = new IncomeRecord(amount, tipas, LocalDateTime.now(), true, (String) null);
+        int innumber = 3;
+        innumber++;
+        IncomeRecord incomeRecord = new IncomeRecord(amount, tipas, LocalDateTime.now(), true, (String) null, innumber);
         budgetService.setIncomeRecord(incomeRecord);
     }
 
@@ -82,7 +89,9 @@ public class BudgetManager {
         BigDecimal amount = scanner.nextBigDecimal();
         System.out.println("Iveskite pajamu tipa: ");
         String tipas = scanner.next();
-        ExpenseRecord expenseRecord = new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"));
+        int expensenumber = 3;
+        expensenumber++;
+        ExpenseRecord expenseRecord = new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), expensenumber);
         budgetService.setExpenseRecords(expenseRecord);
     }
 
