@@ -3,19 +3,22 @@ package org.maven.jp_budget;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class ExpenseRecord {
-    private final BigDecimal amount;
-    private final String category;
-    private final LocalDateTime date;
+public class ExpenseRecord extends Record{
     private final PaymentMethodType paymentMethod;
     private final BankCard bankCard;
 
-    public ExpenseRecord(BigDecimal amount, String category, LocalDateTime date, PaymentMethodType paymentMethod, BankCard bankCard) {
-        this.amount = amount;
-        this.category = category;
-        this.date = date;
+
+    public ExpenseRecord(BigDecimal amount, String category, LocalDateTime date, PaymentMethodType paymentMethod, BankCard bankCard, int id) {
+        super.amount = amount;
+        super.category = category;
+        super.date = date;
         this.paymentMethod = paymentMethod;
         this.bankCard = bankCard;
+        this.id = id;
+    }
+
+    public int getid() {
+        return id++;
     }
 
     public BigDecimal getAmount() {
@@ -46,6 +49,7 @@ public class ExpenseRecord {
         sb.append(", date=").append(date);
         sb.append(", paymentMethod=").append(paymentMethod);
         sb.append(", bankCard=").append(bankCard);
+        sb.append(", ID=").append(id);
         sb.append('}');
         return sb.toString();
     }

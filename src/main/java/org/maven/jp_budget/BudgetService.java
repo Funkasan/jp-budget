@@ -9,7 +9,14 @@ public class BudgetService {
 
     private final List<IncomeRecord> incomeRecords = new ArrayList<>();
     private final List<ExpenseRecord> expenseRecords = new ArrayList<>();
+    private final List<Record> Records = new ArrayList<>();
 
+    public List<Record> getRecords() {
+        return Records;
+    }
+    public void setRecord(final Record Records) {
+        this.Records.add(Records);
+    }
     public List<IncomeRecord> getIncomeRecords() {
         return incomeRecords;
     }
@@ -33,6 +40,9 @@ public class BudgetService {
         return totalIncome-totalExpense;
 
     }
+   public void deleteRecord(){
+
+   }
 
 
 

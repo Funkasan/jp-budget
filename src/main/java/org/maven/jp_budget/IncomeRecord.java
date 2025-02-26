@@ -3,21 +3,24 @@ package org.maven.jp_budget;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
-public class IncomeRecord {
-    private final BigDecimal amount;
-    private final String category;
-    private final LocalDateTime date;
+public class IncomeRecord extends Record {
+
     private final boolean isBankTransfer;
     private final String otherInfo;
 
 
-    public IncomeRecord(BigDecimal amount, String category, LocalDateTime date, boolean isBankTransfer, String otherInfo) {
-        this.amount = amount;
-        this.category = category;
-        this.date = date;
+
+    public IncomeRecord(BigDecimal amount, String category, LocalDateTime date, boolean isBankTransfer, String otherInfo, int id) {
+        super.amount = amount;
+        super.category = category;
+        super.date = date;
         this.isBankTransfer = isBankTransfer;
         this.otherInfo = otherInfo;
+        this.id = id;
+    }
 
+    public int getId() {
+        return id++;
     }
 
     public BigDecimal getAmount() {
@@ -48,6 +51,7 @@ public class IncomeRecord {
         sb.append(", date=").append(date);
         sb.append(", isBankTransfer=").append(isBankTransfer);
         sb.append(", otherInfo='").append(otherInfo).append('\'');
+        sb.append(", ID=").append(id);
         sb.append('}');
         return sb.toString();
     }
