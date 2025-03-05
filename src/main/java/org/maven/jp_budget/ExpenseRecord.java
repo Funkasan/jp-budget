@@ -18,7 +18,7 @@ public class ExpenseRecord extends Record{
     }
 
     public int getid() {
-        return id++;
+        return id;
     }
 
     public BigDecimal getAmount() {

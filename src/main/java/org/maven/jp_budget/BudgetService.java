@@ -40,10 +40,10 @@ public class BudgetService {
         return totalIncome-totalExpense;
 
     }
-   public void deleteRecord(){
-
+   public void deleteRecord(int id) {
+       incomeRecords.removeIf(record -> record.getId() == id);
+       expenseRecords.removeIf(record -> record.getid() == id);
+       Records.removeIf(record -> record.id == id);
    }
-
-
-
 }
+
