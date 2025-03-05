@@ -20,7 +20,7 @@ public class IncomeRecord extends Record {
     }
 
     public int getId() {
-        return id++;
+        return id;
     }
 
     public BigDecimal getAmount() {
