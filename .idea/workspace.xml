@@ -6,11 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9f6e89a8-deec-46c2-94d0-37533d43a87b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetDataIncomeResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetDataIncomeResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/ExpenseRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/ExpenseRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/IncomeRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/IncomeRecord.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +25,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="budget-demo" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -181,6 +177,11 @@
             <list>
               <RecentGroup>
                 <option name="FILTER_VALUES">
+                  <option value="origin/budget-demo" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
                   <option value="HEAD" />
                 </option>
               </RecentGroup>
@@ -199,7 +200,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="maven-project" />
+                        <option value="budget-demo" />
                       </list>
                     </value>
                   </entry>
