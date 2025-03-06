@@ -1,18 +1,20 @@
 package org.maven.jp_budget;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
 import java.util.Scanner;
 
-public class BudgetManager {
+import static org.maven.jp_budget.AddExpenseRecord.addExpense;
+import static org.maven.jp_budget.AddIncomeRecord.addIncome;
 
+public class BudgetManager {
     static final BudgetService budgetService = new BudgetService();
+
     Scanner scanner = new Scanner(System.in);
-    int id=0;
+    static int id = 1;
+
     public void run() {
 
         int pasirinkimas;
-        
+
         // IncomeRecord incomeRecord1 = new IncomeRecord(BigDecimal.valueOf(1500L), "Atlyginimas", LocalDateTime.now(), true, (String) null, 1);
         // budgetService.setIncomeRecord(incomeRecord1);
         // IncomeRecord incomeRecord2 = new IncomeRecord(BigDecimal.valueOf(600L), "Pensija", LocalDateTime.now(), true, (String) null, 2);
@@ -26,8 +28,7 @@ public class BudgetManager {
         printIncomeRecords();
 
         printExpenseRecords();
-        budgetService.balansas();
-        System.out.println(budgetService.balansas());
+
 
 
         do {
@@ -37,7 +38,8 @@ public class BudgetManager {
             System.out.println("3. Patikrinti balansą");
             System.out.println("4. Parodyti pajamas");
             System.out.println("5. Parodyti islaidas");
-            System.out.println("6. Pasalinti saskaita");
+            System.out.println("6. Parodyti visas saskaitas");
+            System.out.println("7. Pasalinti saskaita");
             System.out.println("0. Išeiti");
             System.out.print("Pasirinkite veiksmą: ");
             pasirinkimas = scanner.nextInt();
@@ -59,6 +61,9 @@ public class BudgetManager {
                     printExpenseRecords();
                     break;
                 case 6:
+                    printRecords();
+                    break;
+                case 7:
                     System.out.println("Iveskite israso ID numeri: ");
                     int deleteId = scanner.nextInt();
                     budgetService.deleteRecord(deleteId);
@@ -76,42 +81,54 @@ public class BudgetManager {
 
     }
 
-    private void addIncome() {
-        System.out.println("Iveskite pajamu dydi: ");
-        BigDecimal amount = scanner.nextBigDecimal();
-        System.out.println("Iveskite pajamu tipa: ");
-        String tipas = scanner.next();
-        id++;
-        IncomeRecord incomeRecord = new IncomeRecord(amount, tipas, LocalDateTime.now(), true, (String) null, id);
-        budgetService.setIncomeRecord(incomeRecord);
-    }
 
-    private void addExpense() {
-        System.out.println("Iveskite islaidu dydi: ");
-        BigDecimal amount = scanner.nextBigDecimal();
-        System.out.println("Iveskite islaidu tipa: ");
-        String tipas = scanner.next();
-        id++;
-        ExpenseRecord expenseRecord = new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), id);
-        budgetService.setExpenseRecords(expenseRecord);
-    }
+
+//    private void addIncome() {
+//        System.out.println("Iveskite pajamu dydi: ");
+//        BigDecimal amount = scanner.nextBigDecimal();
+//        System.out.println("Iveskite pajamu tipa: ");
+//        String tipas = scanner.next();
+//        id++;
+//        Record Record = new IncomeRecord(amount, tipas, LocalDateTime.now(), true, (String) null, id);
+//        budgetService.setRecord(Record);
+//
+//    }
+
+//    private void addExpense() {
+//        System.out.println("Iveskite islaidu dydi: ");
+//        BigDecimal amount = scanner.nextBigDecimal();
+//        System.out.println("Iveskite islaidu tipa: ");
+//        String tipas = scanner.next();
+//        id++;
+//        Record Record = new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), id);
+////        records.add(new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), id));
+//        budgetService.setRecord(Record);
+//    }
 
 
     private static void printIncomeRecords() {
-        for (IncomeRecord record : budgetService.getIncomeRecords()) {
+        for (Record record : budgetService.getIncomeRecords()) {
             System.out.println(record);
         }
 
     }
 
     private static void printExpenseRecords() {
-        for (ExpenseRecord record : budgetService.getExpenseRecords()) {
+        for (Record record : budgetService.getExpenseRecords()) {
+            System.out.println(record);
+        }
+
+    }
+    private static void printRecords() {
+        for (Record record : budgetService.getRecords()) {
             System.out.println(record);
         }
 
     }
 
-
+    public static int getId() {
+        return id++;
+    }
 }
 
 

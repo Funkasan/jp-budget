@@ -9,29 +9,26 @@ public class ExpenseRecord extends Record{
 
 
     public ExpenseRecord(BigDecimal amount, String category, LocalDateTime date, PaymentMethodType paymentMethod, BankCard bankCard, int id) {
-        super.amount = amount;
-        super.category = category;
-        super.date = date;
+        super(amount, category, date, id);
         this.paymentMethod = paymentMethod;
         this.bankCard = bankCard;
-        this.id = id;
     }
 
-    public int getid() {
-        return id;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public LocalDateTime getDate() {
-        return date;
-    }
+//    public int getid() {
+//        return id;
+//    }
+//
+//    public BigDecimal getAmount() {
+//        return amount;
+//    }
+//
+//    public String getCategory() {
+//        return category;
+//    }
+//
+//    public LocalDateTime getDate() {
+//        return date;
+//    }
 
     public PaymentMethodType getPaymentMethod() {
         return paymentMethod;

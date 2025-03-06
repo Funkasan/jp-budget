@@ -1,49 +1,80 @@
 package org.maven.jp_budget;
 
 import java.math.BigDecimal;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class BudgetService {
 
-    private final List<IncomeRecord> incomeRecords = new ArrayList<>();
-    private final List<ExpenseRecord> expenseRecords = new ArrayList<>();
-    private final List<Record> Records = new ArrayList<>();
+//    private final List<Record> incomeRecords = new ArrayList<>();
+//    private final List<Record> expenseRecords = new ArrayList<>();
+    private final List<Record> records = new ArrayList<>();
 
     public List<Record> getRecords() {
-        return Records;
+        return records;
     }
+
     public void setRecord(final Record Records) {
-        this.Records.add(Records);
-    }
-    public List<IncomeRecord> getIncomeRecords() {
-        return incomeRecords;
+        this.records.add(Records);
     }
 
-    public void setIncomeRecord(final IncomeRecord incomeRecords) {
-        this.incomeRecords.add(incomeRecords);
+    public List<Record> getIncomeRecords() {
+        return records;
     }
 
-    public List<ExpenseRecord> getExpenseRecords() {
-        return expenseRecords;
+    public void setIncomeRecord(final Record incomeRecords) {
+        this.records.add(incomeRecords);
     }
 
-    public void setExpenseRecords(final ExpenseRecord expenseRecords) {
-        this.expenseRecords.add(expenseRecords);
+    public List<Record> getExpenseRecords() {
+        return records;
     }
 
-    public double balansas(){
-        double totalIncome = incomeRecords.stream().map(IncomeRecord::getAmount).filter(Objects::nonNull).mapToDouble(BigDecimal::doubleValue).sum();
-        double totalExpense = expenseRecords.stream().map(ExpenseRecord::getAmount).filter(Objects::nonNull).mapToDouble(BigDecimal::doubleValue).sum();
-
-        return totalIncome-totalExpense;
-
+    public void setExpenseRecords(final Record expenseRecords) {
+        this.records.add(expenseRecords);
     }
-   public void deleteRecord(int id) {
-       incomeRecords.removeIf(record -> record.getId() == id);
-       expenseRecords.removeIf(record -> record.getid() == id);
-       Records.removeIf(record -> record.id == id);
-   }
+
+    public double balansas() {
+        double totalIncome = 0;
+        double totalExpenses = 0;
+        
+        for (Record record : records) {
+            if (record instanceof IncomeRecord) {
+                totalIncome += record.getAmount().doubleValue();
+            } else if (record instanceof ExpenseRecord) {
+                totalExpenses += record.getAmount().doubleValue();
+            }
+        }
+        
+        return totalIncome - totalExpenses;
+    }
+
+//    private List<Record> record() {
+//        if (record -> record() == incomeRecords) {
+//
+//        }
+//    }
+//
+    public void deleteRecord(int id) {
+        records.removeIf(record -> record.getId() == id);
+    }
+
+
+//    private void addExpense() {
+//        System.out.println("Iveskite islaidu dydi: ");
+//        Scanner scanner = new Scanner(System.in);
+//        BigDecimal amount = scanner.nextBigDecimal();
+//        System.out.println("Iveskite islaidu tipa: ");
+//        String tipas = scanner.next();
+//        id++;
+//        Record Record = new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), id);
+////        records.add(new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), id));
+//        budgetService.setRecord(Record);
+//    }
+
+
 }
 

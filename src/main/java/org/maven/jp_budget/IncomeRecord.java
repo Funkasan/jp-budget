@@ -11,29 +11,26 @@ public class IncomeRecord extends Record {
 
 
     public IncomeRecord(BigDecimal amount, String category, LocalDateTime date, boolean isBankTransfer, String otherInfo, int id) {
-        super.amount = amount;
-        super.category = category;
-        super.date = date;
+        super(amount, category, date, id);
         this.isBankTransfer = isBankTransfer;
         this.otherInfo = otherInfo;
-        this.id = id;
     }
 
-    public int getId() {
-        return id;
-    }
-
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public LocalDateTime getDate() {
-        return date;
-    }
+//    public int getId() {
+//        return id;
+//    }
+//
+////    public BigDecimal getAmount() {
+////        return amount;
+////    }
+//
+//    public String getCategory() {
+//        return category;
+//    }
+//
+//    public LocalDateTime getDate() {
+//        return date;
+//    }
 
     public boolean isBankTransfer() {
         return isBankTransfer;
