@@ -89,7 +89,7 @@ public class BudgetManager {
     private void addExpense() {
         System.out.println("Iveskite islaidu dydi: ");
         BigDecimal amount = scanner.nextBigDecimal();
-        System.out.println("Iveskite pajamu tipa: ");
+        System.out.println("Iveskite islaidu tipa: ");
         String tipas = scanner.next();
         id++;
         ExpenseRecord expenseRecord = new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), id);
