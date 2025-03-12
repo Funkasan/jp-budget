@@ -17,6 +17,14 @@ public class Record {
         this.id = id;
     }
 
+    public void setAmount(BigDecimal amount) {
+        this.amount = amount;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
     public BigDecimal getAmount() {
         return amount;
     }
@@ -29,6 +37,9 @@ public class Record {
         return date;
     }
     public int getId() {
+        return id;
+    }
+    public int getRecordById(int recordId) {
         return id;
     }
 
