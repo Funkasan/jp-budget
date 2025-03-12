@@ -22,17 +22,17 @@ public class BudgetService {
         return records;
     }
 
-    public void setIncomeRecord(final Record incomeRecords) {
-        this.records.add(incomeRecords);
-    }
+//    public void setIncomeRecord(final Record incomeRecords) {
+//        this.records.add(incomeRecords);
+//    }
 
     public List<Record> getExpenseRecords() {
         return records;
     }
 
-    public void setExpenseRecords(final Record expenseRecords) {
-        this.records.add(expenseRecords);
-    }
+//    public void setExpenseRecords(final Record expenseRecords) {
+//        this.records.add(expenseRecords);
+//    }
 
     public double balansas() {
         double totalIncome = 0;

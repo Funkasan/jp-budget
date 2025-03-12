@@ -30,7 +30,6 @@ public class BudgetManager {
         printExpenseRecords();
 
 
-
         do {
             System.out.println("Meniu:");
             System.out.println("1. Pridėti pajamas");
@@ -82,7 +81,6 @@ public class BudgetManager {
     }
 
 
-
 //    private void addIncome() {
 //        System.out.println("Iveskite pajamu dydi: ");
 //        BigDecimal amount = scanner.nextBigDecimal();
@@ -101,29 +99,31 @@ public class BudgetManager {
 //        String tipas = scanner.next();
 //        id++;
 //        Record Record = new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), id);
-////        records.add(new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), id));
+
+    /// /        records.add(new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), id));
 //        budgetService.setRecord(Record);
 //    }
-
-
     private static void printIncomeRecords() {
-        for (Record record : budgetService.getIncomeRecords()) {
-            System.out.println(record);
+        for (Record record : budgetService.getRecords()) {
+            if (record instanceof IncomeRecord) {
+                System.out.println(record);
+            }
         }
-
     }
 
     private static void printExpenseRecords() {
-        for (Record record : budgetService.getExpenseRecords()) {
-            System.out.println(record);
+        for (Record record : budgetService.getRecords()) {
+            if (record instanceof ExpenseRecord) {
+                System.out.println(record);
+            }
         }
-
     }
+
     private static void printRecords() {
+
         for (Record record : budgetService.getRecords()) {
             System.out.println(record);
         }
-
     }
 
     public static int getId() {
