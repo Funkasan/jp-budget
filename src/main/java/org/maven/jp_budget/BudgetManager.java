@@ -10,6 +10,11 @@ public class BudgetManager {
 
     Scanner scanner = new Scanner(System.in);
     static int id = 1;
+    private final RecordModifier recordModifier;
+
+    public BudgetManager() {
+        this.recordModifier = new RecordModifier(budgetService, scanner);
+    }
 
     public void run() {
 
@@ -39,6 +44,7 @@ public class BudgetManager {
             System.out.println("5. Parodyti islaidas");
             System.out.println("6. Parodyti visas saskaitas");
             System.out.println("7. Pasalinti saskaita");
+            System.out.println("8. Keisti įrašo reikšmes");
             System.out.println("0. Išeiti");
             System.out.print("Pasirinkite veiksmą: ");
             pasirinkimas = scanner.nextInt();
@@ -68,6 +74,9 @@ public class BudgetManager {
                     budgetService.deleteRecord(deleteId);
                     System.out.println("Israsas istrintas");
                     break;
+                case 8:
+                    recordModifier.modifyRecord();
+                    break;
                 case 0:
                     System.out.println("Programa baigta.");
                     break;
@@ -80,29 +89,6 @@ public class BudgetManager {
 
     }
 
-
-//    private void addIncome() {
-//        System.out.println("Iveskite pajamu dydi: ");
-//        BigDecimal amount = scanner.nextBigDecimal();
-//        System.out.println("Iveskite pajamu tipa: ");
-//        String tipas = scanner.next();
-//        id++;
-//        Record Record = new IncomeRecord(amount, tipas, LocalDateTime.now(), true, (String) null, id);
-//        budgetService.setRecord(Record);
-//
-//    }
-
-//    private void addExpense() {
-//        System.out.println("Iveskite islaidu dydi: ");
-//        BigDecimal amount = scanner.nextBigDecimal();
-//        System.out.println("Iveskite islaidu tipa: ");
-//        String tipas = scanner.next();
-//        id++;
-//        Record Record = new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), id);
-
-    /// /        records.add(new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), id));
-//        budgetService.setRecord(Record);
-//    }
     private static void printIncomeRecords() {
         for (Record record : budgetService.getRecords()) {
             if (record instanceof IncomeRecord) {
@@ -120,7 +106,6 @@ public class BudgetManager {
     }
 
     private static void printRecords() {
-
         for (Record record : budgetService.getRecords()) {
             System.out.println(record);
         }
@@ -130,8 +115,3 @@ public class BudgetManager {
         return id++;
     }
 }
-
-
-
-
-
