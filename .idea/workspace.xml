@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9f6e89a8-deec-46c2-94d0-37533d43a87b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/AddExpenseRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/AddIncomeRecord.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/exception/AmountLessOrEqualZeroException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetDataIncomeResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetDataIncomeResolver.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/BudgetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/ExpenseRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/ExpenseRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/IncomeRecord.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/IncomeRecord.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/maven/jp_budget/Record.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +176,23 @@
       <option name="project" value="LOCAL" />
       <updated>1741269342905</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Delete Incomerecord and ExpenseRecord lists.">
+      <option name="closed" value="true" />
+      <created>1741277946714</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1741277946714</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Delete Incomerecord and ExpenseRecord lists.">
+      <option name="closed" value="true" />
+      <created>1741292546501</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1741292546501</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -235,6 +243,7 @@
     <MESSAGE value="Pakeitimai.01" />
     <MESSAGE value="Pridetas Balansas ir Meniu." />
     <MESSAGE value="Delete Record added." />
-    <option name="LAST_COMMIT_MESSAGE" value="Delete Record added." />
+    <MESSAGE value="Delete Incomerecord and ExpenseRecord lists." />
+    <option name="LAST_COMMIT_MESSAGE" value="Delete Incomerecord and ExpenseRecord lists." />
   </component>
 </project>

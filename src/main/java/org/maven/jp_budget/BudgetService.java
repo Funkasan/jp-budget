@@ -1,16 +1,13 @@
 package org.maven.jp_budget;
 
-import java.math.BigDecimal;
-import java.time.LocalDateTime;
+
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
-import java.util.Scanner;
+
 
 public class BudgetService {
 
-//    private final List<Record> incomeRecords = new ArrayList<>();
-//    private final List<Record> expenseRecords = new ArrayList<>();
+
     private final List<Record> records = new ArrayList<>();
 
     public List<Record> getRecords() {
@@ -25,17 +22,17 @@ public class BudgetService {
         return records;
     }
 
-    public void setIncomeRecord(final Record incomeRecords) {
-        this.records.add(incomeRecords);
-    }
+//    public void setIncomeRecord(final Record incomeRecords) {
+//        this.records.add(incomeRecords);
+//    }
 
     public List<Record> getExpenseRecords() {
         return records;
     }
 
-    public void setExpenseRecords(final Record expenseRecords) {
-        this.records.add(expenseRecords);
-    }
+//    public void setExpenseRecords(final Record expenseRecords) {
+//        this.records.add(expenseRecords);
+//    }
 
     public double balansas() {
         double totalIncome = 0;
