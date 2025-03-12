@@ -20,16 +20,6 @@ public class BudgetManager {
 
         int pasirinkimas;
 
-        // IncomeRecord incomeRecord1 = new IncomeRecord(BigDecimal.valueOf(1500L), "Atlyginimas", LocalDateTime.now(), true, (String) null, 1);
-        // budgetService.setIncomeRecord(incomeRecord1);
-        // IncomeRecord incomeRecord2 = new IncomeRecord(BigDecimal.valueOf(600L), "Pensija", LocalDateTime.now(), true, (String) null, 2);
-        // budgetService.setIncomeRecord(incomeRecord2);
-        // ExpenseRecord expenseRecord1 = new ExpenseRecord(BigDecimal.valueOf(100L), "Food", LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), 3);
-        // budgetService.setExpenseRecords(expenseRecord1);
-        // ExpenseRecord expenseRecord2 = new ExpenseRecord(BigDecimal.valueOf(200L), "Komunaliniai", LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), 4);
-
-        // budgetService.setExpenseRecords(expenseRecord2);
-
         printIncomeRecords();
 
         printExpenseRecords();

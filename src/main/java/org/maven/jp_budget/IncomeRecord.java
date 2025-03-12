@@ -16,22 +16,6 @@ public class IncomeRecord extends Record {
         this.otherInfo = otherInfo;
     }
 
-//    public int getId() {
-//        return id;
-//    }
-//
-////    public BigDecimal getAmount() {
-////        return amount;
-////    }
-//
-//    public String getCategory() {
-//        return category;
-//    }
-//
-//    public LocalDateTime getDate() {
-//        return date;
-//    }
-
     public boolean isBankTransfer() {
         return isBankTransfer;
     }
