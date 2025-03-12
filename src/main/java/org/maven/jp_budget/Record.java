@@ -39,6 +39,7 @@ public class Record {
     public int getId() {
         return id;
     }
+
     public int getRecordById(int recordId) {
         return id;
     }

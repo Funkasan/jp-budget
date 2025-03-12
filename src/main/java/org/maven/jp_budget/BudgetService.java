@@ -15,13 +15,6 @@ public class BudgetService {
         this.records.add(Records);
     }
 
-    public List<Record> getIncomeRecords() {
-        return records;
-    }
-
-    public List<Record> getExpenseRecords() {
-        return records;
-    }
 
     public double balansas() {
         double totalIncome = 0;
@@ -34,7 +27,6 @@ public class BudgetService {
                 totalExpenses += record.getAmount().doubleValue();
             }
         }
-        
         return totalIncome - totalExpenses;
     }
 

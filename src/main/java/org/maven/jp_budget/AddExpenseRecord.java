@@ -14,9 +14,8 @@ public class AddExpenseRecord  {
         Scanner scanner = new Scanner(System.in);
         BigDecimal amount = scanner.nextBigDecimal();
         System.out.println("Iveskite islaidu tipa: ");
-        String tipas = scanner.next();
-        Record Record = new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), BudgetManager.getId());
-//        records.add(new ExpenseRecord(amount, tipas, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), id));
+        String category = scanner.next();
+        Record Record = new ExpenseRecord(amount, category, LocalDateTime.now(), PaymentMethodType.CARD, new BankCard("Revolut", "1234"), BudgetManager.getId());
         budgetService.setRecord(Record);
     }
 }

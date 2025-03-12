@@ -14,9 +14,8 @@ public class AddIncomeRecord {
         Scanner scanner = new Scanner(System.in);
         BigDecimal amount = scanner.nextBigDecimal();
         System.out.println("Iveskite pajamu tipa: ");
-        String tipas = scanner.next();
-
-        Record Record = new IncomeRecord(amount, tipas, LocalDateTime.now(), true, (String) null, BudgetManager.getId());
+        String category = scanner.next();
+        Record Record = new IncomeRecord(amount, category, LocalDateTime.now(), true, (String) null, BudgetManager.getId());
         budgetService.setRecord(Record);
     }
 
